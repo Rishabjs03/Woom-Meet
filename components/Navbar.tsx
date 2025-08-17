@@ -1,11 +1,13 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Mobilenav from "./Mobilenav";
+import { SignedIn, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
-    <nav className=" flex flex-between fixed z-50 w-full bg-dark-1 px-6 lg:px-10">
+    <nav className=" flex flex-between fixed z-50 w-full h-16 bg-dark-1 px-6 lg:px-10">
       <Link href="/" className="flex items-center gap-1">
         <Image
           src="/icons/logo.svg"
@@ -19,6 +21,9 @@ const Navbar = () => {
         </p>
       </Link>
       <div className=" flex flex-between gap-5">
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
         <Mobilenav />
       </div>
     </nav>

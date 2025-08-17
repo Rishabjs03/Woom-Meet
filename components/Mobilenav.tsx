@@ -4,9 +4,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
@@ -26,7 +23,7 @@ const Mobilenav = () => {
             width={36}
             height={36}
             alt="menu"
-            className="cursor-pointer sm:hidden"
+            className="cursor-pointer mt-2 sm:hidden"
           />
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-dark-1">
